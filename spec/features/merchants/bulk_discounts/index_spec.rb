@@ -34,4 +34,8 @@ RSpec.describe 'bulk discount index page' do
     expect(page).to have_link("See Discount #{@discount_2.id}")
     click_link("See Discount #{@discount_1.id}")
   end
+
+  it 'it has a link to and takes me to create a new discount' do
+    
+  end
 end
