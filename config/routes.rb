@@ -10,6 +10,9 @@ Rails.application.routes.draw do
 
     get  '/invoices',     to: 'merchant_invoices#index'
     get  '/invoices/:id', to: 'merchant_invoices#show', as: 'invoice'
+
+    resources :bulk_discounts, only: [:index, :show, :new, :create]
+    post '/bulk_discounts/new', to: 'bulk_discounts#new'
   end
 
   resources :admin, only: [:index]
@@ -18,6 +21,4 @@ Rails.application.routes.draw do
     resources :invoices, only: [:index, :show, :update]
     resources :merchants, only: [:index, :show, :edit, :update, :new, :create]
   end
-
-  resources :bulk_discounts, only: [:index, :show]
 end
