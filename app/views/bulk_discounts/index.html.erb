@@ -3,5 +3,6 @@
   Percentage Discount: <%= discount.percentage_discount %><br>
   Quantity Threshold: <%= discount.quantity_threshold %><br>
   <%= link_to "See Discount #{discount.id}", merchant_bulk_discounts_path(@merchant, discount.id) %>
+  <%= link_to "Delete #{discount.id}", merchant_bulk_discount_path(@merchant, discount.id), method: :delete %>
   <hr>
 <% end %>
