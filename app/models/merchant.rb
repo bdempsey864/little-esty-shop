@@ -56,11 +56,3 @@ class Merchant < ApplicationRecord
     .limit(5)
   end
 end
-
-# def invoice_items_by_invoice(invoice)
-#   ii = invoice_items.where("invoice_id = ?", invoice.id)
-# end
-
-# def disabled?
-#   status == 'Disabled'
-# end
