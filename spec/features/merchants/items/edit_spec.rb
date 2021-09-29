@@ -38,6 +38,3 @@ RSpec.describe 'Merchant Item Edit page' do
     end
   end
 end
-
-
-# And I see a flash message stating that the information has been successfully updated.
